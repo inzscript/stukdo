@@ -1,57 +1,21 @@
 <p id="notice"><%= notice %></p>
 
-<h1>ToDo</h1>
+<div class="row">
+  <div class="col-md-4"><h1 class="text-center">To Do</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Content</th>
-      <th>State</th>
-      <th colspan="4"></th>
-    </tr>
-  </thead>
+  <%= render @to_do %>
 
-  <tbody>
-    <%= render @to_do %>
-  </tbody>
-</table>
+  </div>
+  <div class="col-md-4"><h1 class="text-center">Doing</h1>
 
-<br>
-
-<h1>Doing</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Content</th>
-      <th>State</th>
-      <th colspan="5"></th>
-    </tr>
-  </thead>
-
-  <tbody>
     <%= render @doing %>
-  </tbody>
-</table>
 
-<br>
+  </div>
+  <div class="col-md-4"><h1 class="text-center">Done</h1>
 
-<h1>Done</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Content</th>
-      <th>State</th>
-      <th colspan="4"></th>
-    </tr>
-  </thead>
-
-  <tbody>
     <%= render @done %>
-  </tbody>
-</table>
 
-<br>
+  </div>
+</div>
 
 <%= link_to 'New Task', new_task_path %>
